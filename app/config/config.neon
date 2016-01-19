@@ -1,0 +1,33 @@
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+
+parameters:
+
+
+extensions:
+	map: Oli\GoogleAPI\MapApiExtension
+	
+
+map:
+#	key: my_key
+	width: 750px
+	height: 450px
+	markers:
+		iconDefaultPath: images
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+
+services:
+	router: App\RouterFactory::createRouter
