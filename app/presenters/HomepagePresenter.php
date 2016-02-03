@@ -37,7 +37,7 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 			  'lat' => 59.2987638,
 			  'lng' => 17.9917639,
 			  'icon' => 'point.png',
-			  'waypoint' => 'waypoints',
+			  'waypoint' => 'waypoint',
 			  'title' => 'Bar',
 			  'description' => '',
 		  ],
@@ -65,7 +65,7 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 			  'lat' => 59.3014033,
 			  'lng' => 18.0068793,
 			  'icon' => 'point.png',
-			  'waypoint' => 'waypoints'
+			  'waypoint' => 'waypoint'
 		  ],
 		  [
 			  'lat' => 59.3016619,
@@ -118,7 +118,7 @@ class HomepagePresenter extends Nette\Application\UI\Presenter
 
 			if (array_key_exists('waypoint', $marker))
 			{
-				// $marker->waypoint can be start, end, waypoints
+				// $marker->waypoint can be start, end, waypoint
 				$map->setWaypoint($marker->waypoint, $addedMarker->getMarker());
 			}
 		}
